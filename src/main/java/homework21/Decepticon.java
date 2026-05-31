@@ -1,11 +1,26 @@
 public class Decepticon extends Transformer {
-    String teamName;
-    final String eyeColor = "Red";
-    boolean kindness = false;
-
+    private String teamName;
+    private final String eyeColor = "Red";
+    private boolean kindness = false;
     public Decepticon(String name, String teamName) {
         super(name);
         this.teamName = teamName;
+    }
+
+    public String getTeamName() {
+        return teamName;
+    }
+
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
+    }
+
+    public String getEyeColor() {
+        return eyeColor;
+    }
+
+    public boolean isKindness() {
+        return kindness;
     }
 
     public void setKindness(boolean kindness){
@@ -13,6 +28,6 @@ public class Decepticon extends Transformer {
     }
 
     public void transform(String type) {
-        System.out.println(name + " transforms into " + type); // добавлен параметр type для передачи типа трансформации
+        System.out.println(getName() + " transforms into " + type); // добавлен параметр type для передачи типа трансформации
     }
 }
