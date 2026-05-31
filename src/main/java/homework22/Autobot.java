@@ -9,23 +9,28 @@ public class Autobot extends Transformer implements Action {
     }
 
     @Override
+    public void run(){
+        System.out.println(getName() + " is running");
+    }
+
+    @Override
     public void fire(){
-        System.out.println(name + " is firing");
+        System.out.println(getName() + " is firing");
     }
 
     @Override
     public void charge(){
-        System.out.println(name + " is charging");
+        System.out.println(getName() + " is charging");
     }
 
     @Override
     public void transform() {
-        System.out.println(name + " transforms into a vehicle");
+        System.out.println(getName() + " transforms into a vehicle");
     }
 
     @Override
     public String toString() { // для отображения читаемой информации
-        return "Autobot {name = " + name + ", team: " + teamName + ", kindness = " + kindness + "}";
+        return "Autobot {name = " + getName() + ", team: " + teamName + ", kindness = " + kindness + "}";
     }
 
 }
